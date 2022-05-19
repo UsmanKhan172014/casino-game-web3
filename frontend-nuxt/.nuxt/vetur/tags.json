@@ -1,0 +1,14 @@
+{
+  "Body": {
+    "description": "Auto imported from components/Body.vue"
+  },
+  "Login": {
+    "description": "Auto imported from components/Login.vue"
+  },
+  "Navbar": {
+    "description": "Auto imported from components/Navbar.vue"
+  },
+  "Profile": {
+    "description": "Auto imported from components/Profile.vue"
+  }
+}

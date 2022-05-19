@@ -1,0 +1,37 @@
+[
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_3faa20f2"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_0252f372"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_c30a31f2"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\register.vue",
+    "chunkName": "pages/register",
+    "_name": "_f675cd96"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_352ee330"
+  }
+]
