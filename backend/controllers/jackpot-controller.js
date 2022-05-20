@@ -1,26 +1,29 @@
 const validator = require("./../middleware/validator");
 const { ethers } = require("ethers");
 const HttpError = require("./../util/http-error");
-
+const jackpot= require('../models/jackpot')
 const INFURA_ID = "dde0b6c9c66049ae9edda38ce236e1da";
 const provider = new ethers.providers.JsonRpcProvider(
   `https://rinkeby.infura.io/v3/${INFURA_ID}`
 );
 
-const Jackpot_ABI = [
-  "function enter(address token, uint amountToPay) public payable",
-  "function transferERC20(address token) public",
-];
+// const Jackpot_ABI = [
+//   "function enter(address token, uint amountToPay) public payable",
+//   "function transferERC20(address token) public",
+// ];
 
-const ERC20_ABI = [
-  "function transfer(address to, uint256 amount) public virtual override returns (bool)",
-  "function balanceOf(address account) public view virtual override returns (uint256)",
-  "function mint(address to, uint256 amount) public",
-  "function approve(address spender, uint256 amount) public virtual override returns (bool)",
-];
+const Jackpot_ABI = require('../abi/jackpot.json');
 
-const jackpotAddress = "0xf47227Bb6B5EB8E6e7aDF42895a2Bc6F126cDA0e";
-const tokenAddress = "0x8665Fe36ddEdB37EBe606ef74caA9EB9a0453d11";
+// const ERC20_ABI = [
+//   "function transfer(address to, uint256 amount) public virtual override returns (bool)",
+//   "function balanceOf(address account) public view virtual override returns (uint256)",
+//   "function mint(address to, uint256 amount) public",
+//   "function approve(address spender, uint256 amount) public virtual override returns (bool)",
+// ];
+const ERC20_ABI=require('../abi/tokens.json');
+
+const jackpotAddress = "0x86Fe2510524De24BcF6898a37A5124981D994948";
+const tokenAddress = "0x2c9f3d54882c7b6aa9A8F09518dFCaE6a46a2A19";
 
 const enterUser = async (req, res, next) => {
   if (validator.validateCheck(req, res)) {
@@ -100,5 +103,33 @@ const awardWinner = async (req, res, next) => {
 
   res.status(200).send(tx);
 };
+const createJackpot = async (req, res, next) => {
+  if (validator.validateCheck(req, res)) {
+    return;
+  }
 
-module.exports = { awardWinner, enterUser };
+  const { name } = req.body;
+
+  let refJackpot;
+  try {
+    refJackpot = await jackpot.findOne({ name: name });
+  } catch (err) {
+    return res.status(500).send("Could not jackpot, Please try again");
+  }
+
+  if (refJackpot) res.status(400).send("Jackpot already exists");
+
+  const newJackpot = new jackpot({
+    name: name,
+  });
+
+  try {
+    await newJackpot.save();
+  } catch (err) {
+    return res.status(500).send(err);
+  }
+
+  res.status(400).send("Jackpot created!");
+};
+
+module.exports = { awardWinner, enterUser,createJackpot };

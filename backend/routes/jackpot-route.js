@@ -16,4 +16,10 @@ router.post(
   jackpotController.awardWinner
 );
 
+router.post(
+  "/create",
+  validator.NameValidator(),
+  jackpotController.createJackpot
+)
+
 module.exports = router;

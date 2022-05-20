@@ -9,6 +9,12 @@ const privateKeyValidator = () => {
   ];
 };
 
+const NameValidator=()=>{
+  return [
+    body('name').not().isEmpty().withMessage('Enter the AlphaNumeric Value for name')
+  ]
+}
+
 const enterJackpotValidator = () => {
   return [
     body("privateKey").not().isEmpty().withMessage("Enter AlphaNumeric Value"),
@@ -24,8 +30,10 @@ const validateCheck = (req, res, next) => {
     return res.status(400).json({ errors: errors.array() });
   }
 };
+
 module.exports = {
   enterJackpotValidator,
   privateKeyValidator,
   validateCheck,
+  NameValidator
 };

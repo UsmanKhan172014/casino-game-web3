@@ -51,10 +51,4 @@ contract jackpot{
           emit winnerAwarded(winner,_moneypool);
     }   
 
-
-   
-    // function startLottery() public{}
-    // function endLottery() public{}
-
-
 }

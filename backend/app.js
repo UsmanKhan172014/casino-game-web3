@@ -17,7 +17,7 @@ app.use("/nft", nft);
 app.use("/jackpot", jackpot);
 
 mongoose
-  .connect("mongodb://127.0.0.1/jackpot")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     app.listen(process.env.PORT,()=>{});
     console.log('Server is running at PORT : '+process.env.PORT)
