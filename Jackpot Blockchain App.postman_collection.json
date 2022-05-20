@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "ab15efeb-5d13-43aa-bcdd-21af22da3eb8",
+		"name": "Jackpot Blockchain App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Enter Jackpot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"privateKey\":\"6b509cdcd8d62be5554478d10b83f356f9a4e6679ba76a78535a8e8d909ad450\",\r\n    \"entryfee\":\"5000000000000000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/jackpot/enter",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"jackpot",
+						"enter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enter NewJackpot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"firstJackpot\",    \r\n    \"address\":\"0xF6aEaedF44539714D87fe270C9957F7CE5d0182c\",\r\n    \"privateKey\":\"91e417d2923ea910b42826504c877a8a1ec89d690a5cb95228c395ca5307c47b\",\r\n    \"entryfee\":\"5000000000000000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/jackpot/enternew",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"jackpot",
+						"enternew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Award WInner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"privateKey\":\"91e417d2923ea910b42826504c877a8a1ec89d690a5cb95228c395ca5307c47b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/jackpot/awardwinner",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"jackpot",
+						"awardwinner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Fahad",
+							"type": "text"
+						},
+						{
+							"key": "secondName",
+							"value": "Saeed",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/HS Computers/Desktop/Important Documents/Passport Picture-Muhammad Fahad Saeed.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload NFT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "generic nft",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Special nft from gametrain",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/nft/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"nft",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create jackpot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"firstJackpot\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/jackpot/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"jackpot",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
