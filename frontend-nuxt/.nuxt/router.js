@@ -4,11 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _3faa20f2 = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
-const _0252f372 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _c30a31f2 = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages/profile" */))
-const _f675cd96 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
-const _352ee330 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _e7c57cc6 = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
+const _8ce02dec = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _58541a5f = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _e23855c2 = () => interopDefault(import('..\\pages\\profile.vue' /* webpackChunkName: "pages/profile" */))
+const _bd0c23c6 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
+const _e2a71170 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -22,24 +23,28 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/admin",
+    component: _e7c57cc6,
+    name: "admin"
+  }, {
     path: "/dashboard",
-    component: _3faa20f2,
+    component: _8ce02dec,
     name: "dashboard"
   }, {
     path: "/login",
-    component: _0252f372,
+    component: _58541a5f,
     name: "login"
   }, {
     path: "/profile",
-    component: _c30a31f2,
+    component: _e23855c2,
     name: "profile"
   }, {
     path: "/register",
-    component: _f675cd96,
+    component: _bd0c23c6,
     name: "register"
   }, {
     path: "/",
-    component: _352ee330,
+    component: _e2a71170,
     name: "index"
   }],
 

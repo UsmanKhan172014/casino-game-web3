@@ -1,37 +1,44 @@
 [
   {
+    "name": "admin",
+    "path": "/admin",
+    "component": "C:\\\\Users\\\\usman\\\\Documents\\\\GitHub\\\\casino-game-web3\\\\frontend-nuxt\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_e7c57cc6"
+  },
+  {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\dashboard.vue",
+    "component": "C:\\\\Users\\\\usman\\\\Documents\\\\GitHub\\\\casino-game-web3\\\\frontend-nuxt\\\\pages\\\\dashboard.vue",
     "chunkName": "pages/dashboard",
-    "_name": "_3faa20f2"
+    "_name": "_8ce02dec"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\login.vue",
+    "component": "C:\\\\Users\\\\usman\\\\Documents\\\\GitHub\\\\casino-game-web3\\\\frontend-nuxt\\\\pages\\\\login.vue",
     "chunkName": "pages/login",
-    "_name": "_0252f372"
+    "_name": "_58541a5f"
   },
   {
     "name": "profile",
     "path": "/profile",
-    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\profile.vue",
+    "component": "C:\\\\Users\\\\usman\\\\Documents\\\\GitHub\\\\casino-game-web3\\\\frontend-nuxt\\\\pages\\\\profile.vue",
     "chunkName": "pages/profile",
-    "_name": "_c30a31f2"
+    "_name": "_e23855c2"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\register.vue",
+    "component": "C:\\\\Users\\\\usman\\\\Documents\\\\GitHub\\\\casino-game-web3\\\\frontend-nuxt\\\\pages\\\\register.vue",
     "chunkName": "pages/register",
-    "_name": "_f675cd96"
+    "_name": "_bd0c23c6"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "E:\\\\Game Train\\\\final-task copy\\\\frontend-nuxt\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\usman\\\\Documents\\\\GitHub\\\\casino-game-web3\\\\frontend-nuxt\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_352ee330"
+    "_name": "_e2a71170"
   }
 ]
